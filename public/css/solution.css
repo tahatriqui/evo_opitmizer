@@ -1,0 +1,196 @@
+
+
+body {
+
+    color: #333;
+}
+
+.design-steps {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.design-steps h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2042be;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.step {
+    width: 180px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step .icon {
+font-size: 50px;
+    color: #2042be;
+    margin-bottom: 15px;
+}
+
+.step h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.contain {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+}
+
+.content-section {
+    width: 55%;
+    padding-right: 20px;
+    /* Add some padding to avoid text touching the image */
+}
+
+.image-section {
+    width: 40%;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.content-section .title {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #5d5d5d;
+}
+
+.content-section .content p {
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.content-section .content .button {
+    margin-top: 30px;
+}
+
+.content-section .content .button a {
+    background: linear-gradient(to right, #2042be, #0d2471);
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    border-radius: 3px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.content-section .content .button a:hover {
+    background: #d4cfcf;
+    color: #0d2471f3;
+}
+
+
+@media (max-width: 1024px) {
+    .contain {
+        width: 90%;
+        padding-top: 50px;
+    }
+
+    .content-section {
+        width: 50%;
+
+    }
+
+    .image-section {
+        width: 45%;
+    }
+
+    .content-section .title {
+        font-size: 24px;
+    }
+
+    .content-section .content p {
+        font-size: 15px;
+    }
+
+    .content-section .content .button a {
+        margin-bottom: 20px;
+    }
+    .content-section .content .button a {
+        font-size: 22px;
+        padding: 10px 35px;
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contain {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .content-section {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .content-section .title {
+        font-size: 22px;
+    }
+
+    .content-section .content p {
+        font-size: 14px;
+    }
+
+    .content-section .content .button a {
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section .title {
+        font-size: 20px;
+    }
+
+    .content-section .content p {
+        font-size: 12px;
+    }
+
+    .content-section .content .button a {
+        font-size: 16px;
+        padding: 8px 25px;
+    }
+}

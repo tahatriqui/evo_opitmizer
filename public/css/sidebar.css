@@ -1,0 +1,52 @@
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.89);
+    color: #001b91;
+    border: 1px solid #fffffff9;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 70vh;
+    overflow-y: auto;
+    /* Ensure scrolling if content exceeds max height */
+}
+
+.sidebar h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar h2 {
+    font-weight: bold;
+    color: #3a3ad4;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.sidebar h4 {
+    color: black;
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+footer {
+    position: relative;
+    /* or absolute */
+    z-index: 10;
+    margin-top: 50px;
+    /* Ensure it’s higher than other overlapping elements */
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .bbb_deals {
+        margin-bottom: 20px;
+        /* Space between deals on mobile */
+    }
+
+
+}

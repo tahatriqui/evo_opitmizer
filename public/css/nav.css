@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+.web-products .nav-link {
+    color: white;
+    font-size: 23px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+.web-products .dropdown-menu {
+    background: linear-gradient(to right, #2042be, #0d2471);
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.web-products .dropdown-item-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.web-products .dropdown-column {
+    margin-right: 20px;
+}
+
+.web-products .dropdown-item {
+    color: white;
+    padding: 10px 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* Reset and base styling */
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family:  "Josefin Sans", serif;
+   }
+html,
+body {
+       height: 100%;
+       width: 100%;
+       margin: 0;
+       display: flex;
+       flex-direction: column;
+       min-height: 100vh;
+
+   }
+
+   /* Navbar styling */
+nav {
+       padding: 20px 80px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       background: linear-gradient(to right, #2042be, #0d2471);
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       z-index: 1000;
+       height: 82px;
+       padding-top:35px
+   }
+
+.logo img {
+       width: 250px;
+       height:auto;
+       margin-bottom:15px;
+       margin-left: -60px;
+
+   }
+
+nav ul {
+       display: flex;
+       gap: 30px;
+       align-items: center;
+
+   }
+
+nav ul li {
+       list-style-type: none;
+       font-size: 23px;
+       position: relative;
+
+   }
+
+nav ul li a {
+       text-decoration: none;
+       color: #ffd700;
+       padding: 10px 0;
+   }
+
+nav ul li::after {
+       content: "";
+       position: absolute;
+       left: 50%;
+       bottom: 0;
+       width: 0;
+       height: 2px;
+       background-color: #fff;
+       transition: width 0.3s ease, left 0.3s ease;
+   }
+
+nav ul li:hover::after {
+       width: 100%;
+       left: 0;
+   }
+
+
+.menu-icon {
+       display: none;
+       cursor: pointer;
+   }
+
+.menu-icon i {
+       color: #fff;
+       font-size: 30px;
+   }
+
+   /* Mobile menu */
+   @media (max-width: 780px) {
+       nav {
+           padding: 10px 40px;
+       }
+
+       nav ul {
+           position: absolute;
+           top: 65px;
+           left: 0;
+           right: 0;
+           flex-direction: column;
+           text-align: center;
+           background: linear-gradient(to right, #2042be, #0d2471);
+           gap: 0;
+           overflow: hidden;
+           max-height: 0;
+       }
+
+       nav ul li {
+           padding: 20px;
+           padding-top: 0;
+       }
+
+       .menu-icon {
+           display: block;
+       }
+
+       .info-bar {
+           display: none;
+       }
+
+   }
+
+
+   /* Main content */
+main {
+       flex-grow: 1;
+       margin-top:24px;
+       /* To ensure content starts below the navbar */
+   }
+
+   /* Footer styling */
+footer {
+       background: linear-gradient(to right, #2042be, #0d2471);
+       color: white;
+       width: 100%;
+   }
+   .dropdown-menu dropdown-item {background: linear-gradient(to right, #2042be, #0d2471);}
+@media (max-width: 768px) {
+    .logo img{
+        margin-left:-60px
+    }
+    .produit-header {
+        flex-direction: column;
+        /* Aligne les éléments en colonne sur les petits écrans */
+        text-align: center;
+        /* Centre le texte */
+    }
+
+    .produit-header h5 {
+        margin-bottom: 10px;
+        /* Ajoute un espace en bas du titre */
+    }
+
+    .products-list li {
+        margin-bottom: 10px;
+        /* Ajoute un espace entre les éléments de la liste */
+    }
+#toggleProducts {
+     display: block;
+     /* Ensure the button is visible on mobile */
+     margin: 10px 0;
+          }
+
+.products-list {
+    margin-top: 10px;
+          }
+.web-products{
+    display: none;
+          }
+        /* MOBILE PRODUCTS*/
+.mobile-products>ul:hover{
+         background: #0017ac90 !important;
+ }
+.mobile-products>ul>li>a{
+     font-size: 15px !important;
+    background: #0017acdc !important;
+     padding: 10px;
+                                  }
+                  .mobile-products>ul>li>a:hover{
+                    background: #0017ac !important;
+                  }
+.mobile-products>ul{
+         min-height: 10vh;
+         z-index: 20000;
+                                  }
+.mobile-products{
+    display: block !important;
+                  }
+.mobile-ul {
+          max-height: 150px;
+         /* Set a max height */
+          overflow-y: auto;
+          /* Enable vertical scrolling */
+          /* Optional: Customize scrollbar appearance */
+         scrollbar-width: thin;
+         /* For Firefox */
+        scrollbar-color: #2216ca #602cd9;
+         /* For Firefox */
+                                  }
+
+     /* For WebKit browsers (Chrome, Safari) */
+.mobile-ul::-webkit-scrollbar {
+        width: 4px;
+
+    }
+
+.mobile-ul::-webkit-scrollbar-thumb {
+         background: #3308eef5;
+          /* Scrollbar color */
+         border-radius: 4px;
+         /* Round edges */
+ }
+
+ .mobile-ul::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+            }
+
+            .lang{
+                display:none
+            }
+
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+
+.container{
+width: 95% !important;
+}
+
+.bbb_deals_item_detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bbb_deals_item_detail_label {
+    font-weight: bold;
+    text-align: left;
+    flex-basis: 75%;  /* Label takes 40% of the width */
+}
+
+.bbb_deals_item_detail_value {
+    text-align: right;
+    flex-basis: 25%;  /* Value takes 60% of the width */
+}
+
+
+
+@media (max-width: 768px) {
+#menuList {
+    min-height: 0;
+    overflow: hidden;
+    transition: min-height 0.3s ease-in-out;
+}
+
+#s {
+    transition: padding-top 0.3s ease-in-out;
+}
+
+}
+
+
+
+
+/* Style the dropdown container */
+.web-products {
+    position: relative;
+}
+
+/* Style the dropdown menu */
+.web-products .drm {
+    display: block; /* Keep it block to apply transitions */
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* Initial position slightly above */
+    transition: all 0.3s ease-in-out; /* Smooth transition for visibility and position */
+    background-color: #333; /* Optional: Background color for the dropdown */
+    padding: 10px;
+    z-index: 1000;
+    margin-top:10px !important;
+    left:-34vw ;
+    width:70vw !important;
+    padding:20px !important
+}
+
+/* Show the dropdown on hover */
+.web-products:hover .drm {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Move to the normal position */
+}
+
+/* Style the dropdown links */
+.web-products .dit {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.2s ease-in-out; /* Smooth color change on hover */
+}
+
+
+
+/* Dropdown column styling */
+.web-products .drc {
+    margin-right: 20px;
+}
+
+/* Dropdown image styling */
+.web-products .dit img {
+    margin-left: 8px;
+    transition: transform 0.2s ease-in-out; /* Smooth image scaling on hover */
+}
+
+.web-products .dit img {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+.lbtn {
+    padding: 5px 2px 26px 1px !important;
+}
+
+
+
+.whatsapp-btn-container .whatsapp-btn {
+    font-size: 48px !important;
+    color: #25d366;
+    display: inline-block !important;
+    transition: all 400ms !important;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover {
+    transform: scale(1.2) !important;
+}
+
+.whatsapp-btn-container span {
+    position: absolute !important;
+    top: 0 !important;
+    left: 4px !important;
+
+    font-weight: bold;
+    color: #075e54;
+    transform: rotateZ(20deg) translateX(10px) !important;
+    opacity: 0;
+    transition: all 400ms !important;
+}
+
+.whatsapp-btn-container .whatsapp-btn:hover+span {
+    transform: rotateZ(0deg) translateX(0px) !important;
+    opacity: 1 !important;
+}
+/* BUTTON WHATSSAP*/
+.whatsapp-btn-container {
+    position: fixed ;
+    right: 30px;
+    opacity: 0;
+    bottom: -50px;
+    padding: 24px;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+    z-index: 999999;
+}
+
+@keyframes fade-up {
+    100% {
+        bottom: 24px;
+        opacity: 1;
+    }
+}
+
+.dit{
+  transition:  .3s  ease-
+
+  background-color:#606db7 !important;
+
+}
+.about {
+    margin-bottom: 20vh;
+    padding-top: 10vh;
+    height: 85vh;
+    position: relative;
+    background-image: url("http://localhost:8000/images/bg111.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Prevents the image from overflowing */
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    z-index: 1; /* Places the overlay above the background image */
+}
+
+.ab-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    z-index: 2; /* Places the content above the overlay */
+}
+
+.ab-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2042be;
+    margin-bottom: 20px;
+}
+
+.ab-content p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing:.5px;
+    font-weight: normal;
+    margin: 0 -72px 0 -72px;
+}
+@media (max-width: 768px) {
+
+
+    .ab-content p {
+        font-size: 14px;
+        text-align: left;
+    }
+}
